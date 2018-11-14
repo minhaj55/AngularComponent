@@ -1,0 +1,43 @@
+p{
+    color: #DA5C80;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+}
+li{
+
+    color: #C80C42;
+    font-size: 20px;
+}
+#showdate{
+    height: 50px;
+    width: 150px;
+    border: 1px #999999 solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: white;
+    background: #999999;
+    display: block;
+}
+.userDetail{
+    height: 100px;
+    width: 120px;
+    margin-top: 10px;
+    border: 1px solid #E54775;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+    background:#E54775 ;
+    color: white;
+}
+button{
+    height: 45px;
+    width: 120px;
+    border-radius: 4px;
+    border:1px solid black;
+    color: #999999;
+    background: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}

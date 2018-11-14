@@ -1,0 +1,21 @@
+
+
+<button (click)=swithcToregister() class=reg>Register</button><span></span><button (click)=toggleLogin() class="logBtn"n>Login</button>
+
+
+
+
+<div *ngIf= !switchToLogin class="container" >
+
+<input  type="text" class="input" placeholder="Name">
+<input type="text" class="input" placeholder="email@example.com">                                     
+<input type="text" class="input" placeholder="Zipcode">
+<input type="text" class="input" placeholder="+91xxxxxxxxxx">
+<input type="button" class="btn" value = "submit">
+</div>
+<div *ngIf= switchToLogin class="login">
+<input type="text" class="input" placeholder="email@example.com">  
+<input type="password" class="input" placeholder="password">  
+<input type="button" class="btn" value = "Log In">
+</div>
+<input type = "text"  [(value)]="appliedClass"><p>{{appliedClass}}</p>

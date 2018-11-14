@@ -1,0 +1,71 @@
+.container{
+	height:350px;
+	width: 330px;
+	padding-top:5px;
+	border-radius: 6px;
+	border: 1px solid #999999  ;
+	margin:10px auto 0px auto;
+	font-family: Century Gothic;
+	font-size: 20px; 
+	 
+}
+.active{
+    background: #2ECC71 ;
+    border: 1px solid #E54775;
+}
+.login{
+    height:210px;
+	width: 330px;
+	padding-top:5px;
+	border-radius: 6px;
+	border: 1px solid #999999  ;
+	margin:10px auto 0px auto;
+	font-family: Century Gothic;
+    font-size: 20px; 
+}
+.input{
+	height:30px;
+	width: 250px;
+	padding: 10px;
+	border-radius: 6px;
+	border: 1px solid #999999  ;
+	margin:15px auto 0px 25px;
+	font-family: Century Gothic;
+	font-size: 16px; 
+}
+.btn{
+	height:50px;
+	width: 280px;
+	padding: 5px;
+	border-radius: 0px;
+	border: 1px solid #0E6251 ;
+	margin:15px auto 0px 25px;
+	font-family: Century Gothic;
+	font-size: 20px; 
+	background: #424949 ;
+	color:white;
+}
+.logBtn{
+   height:45px;
+	width: 162px;
+	padding: 5px;
+	border-radius: 0px;
+   border: 1px solid #515A5A ;
+    margin:0px auto 0px auto;
+	font-family: Century Gothic;
+	font-size: 20px; 
+	background: #515A5A ;
+	color:white;
+}
+.reg{
+    height:45px;
+	width: 162px;
+	padding: 5px;
+	border-radius: 0px;
+	border: 1px solid #E54775 ;
+	margin:20px auto 0px 530px;
+	font-family: Century Gothic;
+	font-size: 20px; 
+	background:#E54775 ;
+	color:white;
+}
