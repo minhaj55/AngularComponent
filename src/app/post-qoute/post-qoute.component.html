@@ -1,0 +1,23 @@
+
+
+  <div id="contentToPost">
+  <p>Post Your Favorite Qoutes</p>
+  <input class="input" type="text" #name placeholder="Username">
+  <input class="input" type="email" #email placeholder="email@example.com">
+  <textarea #qoute class="quoteContainer" placeholder="Type Your Favorite Quote ...."></textarea>
+  <button class="btn" (click)="createUser(name.value,email.value,qoute.value)">Post</button>
+  <div appMyfont>{{action}}</div>
+</div>
+  <div *ngFor="let user of getUserList()" >
+
+  <div  class="showQuote" >
+     <button (click)="deleteQuote(user)">Delete</button>
+    <div appMyfont>{{user.userQuote}}</div> 
+    Posted By {{user.userName}}
+     contact {{user.useremail}}
+    
+
+  </div>
+
+</div>
+

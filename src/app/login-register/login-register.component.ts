@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginRegisterComponent implements OnInit {
 
-  switchToLogin: boolean = true;
-  appliedClass: string = 'active';
+  switchToLogin = true;
   constructor() { }
 
   ngOnInit() {

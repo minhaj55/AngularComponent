@@ -1,17 +1,9 @@
-<h4>User detail</h4>
-<button (click)=expandButton() *ngIf=isExpanded>Expand</button>
-<button (click)=expandButton() *ngIf= !isExpanded>Collapse</button>
-<div *ngIf = !isExpanded class="userDetail">
+<p appMyfont>Developed By</p><span>
+<button (click)="expandButton()" *ngIf="isExpanded">Expand</button>
+<button (click)="expandButton()" *ngIf= "!isExpanded">Collapse</button></span>
+<div *ngIf = "!isExpanded" class="userDetail">
 {{userObj.name}}<br>
 {{userObj.designation}}
 {{userObj.city}}
 {{userObj.mobile}}
 </div><br>
-
-
-
-  <h3>Today is</h3>
-<div id="showdate">
-{{today}}
-
-</div>

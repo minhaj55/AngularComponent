@@ -14,7 +14,7 @@ export class AppComponent {
     this.user.name = 'Minhaj Ahmed';
     this.user.city = 'Hyderbad';
     this.user.designation = 'Software Developer';
-    this.user.mobile = 9874563210;
+    this.user.mobile = 9572111010;
 
   }
 }
