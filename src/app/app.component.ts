@@ -7,14 +7,7 @@ import { User } from './mydate/User.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  user: User;
-  title = 'AngularComponent';
   constructor() {
-    this.user = new User();
-    this.user.name = 'Minhaj Ahmed';
-    this.user.city = 'Hyderbad';
-    this.user.designation = 'Software Developer';
-    this.user.mobile = 9572111010;
 
   }
 }

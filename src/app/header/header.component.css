@@ -23,21 +23,3 @@ strong{
     left: 35px;
     top: -10px;
 }
-/* body{
-    width: 90%;
-    padding: 10px;
-    background-image: url(../images/imgBody.jpg);
-} */
-#footer{
-    height: 70px;
-    padding: 8px;
-    width: 93%;
-    position: fixed;
-    bottom:10px;
-    left: 60px;
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    font-family: century gothic;
-    background: black;
-}

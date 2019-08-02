@@ -1,20 +1,20 @@
 
 
 <button (click)=swithcToregister() class=reg>Register</button><span></span><button (click)=toggleLogin() class="logBtn"n>Login</button>
-
-
-
-
-<div *ngIf= !switchToLogin class="container" >
+<div *ngIf= !switchToLogin class="containermain" >
 
 <input  type="text" class="input" placeholder="Name">
 <input type="text" class="input" placeholder="email@example.com">                                     
 <input type="text" class="input" placeholder="Zipcode">
 <input type="text" class="input" placeholder="+91xxxxxxxxxx">
-<input type="button" class="btn" value = "submit">
+
+<input type="button" class="btn" value = "submit" (click)="swithcToregister()">
 </div>
 <div *ngIf= switchToLogin class="login">
-<input type="text" class="input" placeholder="email@example.com">  
-<input type="password" class="input" placeholder="password">  
-<input type="button" class="btn" value = "Log In">
+    <form [formGroup]="loginForm" novalidate>
+<input  class="input" placeholder="email@example.com" formControlName="email"> 
+<input type="password" class="input" placeholder="password" formControlName="pass">  
+<input type="button" class="btn" value = "Log In" (click)="swithcToregister()">
+</form>  
 </div>
+

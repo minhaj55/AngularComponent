@@ -1,23 +1,29 @@
-
-
+<div class="mainbody" >
   <div id="contentToPost">
-  <p>Post Your Favorite Qoutes</p>
-  <input class="input" type="text" #name placeholder="Username">
-  <input class="input" type="email" #email placeholder="email@example.com">
-  <textarea #qoute class="quoteContainer" placeholder="Type Your Favorite Quote ...."></textarea>
-  <button class="btn" (click)="createUser(name.value,email.value,qoute.value)">Post</button>
-  <div appMyfont>{{action}}</div>
+      <p-toast position="top-left"></p-toast>
+    <form [formGroup]="quoteForm" novalidate>
+  <p>Post Your Favorite Quotes</p>
+  <input class="input" type="text" #name placeholder="Username" formControlName="username" >
+  <input class="input" type="email" #email placeholder="email@example.com"formControlName="email" >
+  <textarea #qoute class="quoteContainer" placeholder="Type Your Favorite Quote ...." formControlName="qoute"></textarea>
+  <button class="btn" (click)="savePost(quoteForm)">Post</button>
+</form>
 </div>
-  <div *ngFor="let user of getUserList()" >
 
-  <div  class="showQuote" >
-     <button (click)="deleteQuote(user)">Delete</button>
-    <div appMyfont>{{user.userQuote}}</div> 
-    Posted By {{user.userName}}
-     contact {{user.useremail}}
-    
-
+<div class="container" >
+<!-- <div id="quoteAction">
+    <button id = "searchbtn" value="search">search</button>
+    <input id = "searchinput" placeholder="serch your quote">
+  </div> -->
+  <div *ngFor="let user of qouteList">
+ <div  class="showQuote" >
+     <button id="delbtn" (click)="deleteQuote(user)">Delete</button>
+   <p appMyfont>{{user.qoute}}</p> 
+    <p>Posted By</p>{{user.username}}
+  <button id="likepost" (click)="addLike(user)">Like</button><span><div id="likeBadge">{{user.likes}}</div></span>
+  <button id="dislikepost" (click)="addDislike(user)">Dislike</button><span><div id="dislikeBadge">{{user.dislikes}}</div></span>
   </div>
-
-</div>
+    </div>
+    </div>
+  </div>
 
