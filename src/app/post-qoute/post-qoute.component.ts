@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { User } from '../qoute_modals/User.model';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { MessageService } from 'primeng/components/common/messageservice';
+import { visitValue } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-post-qoute',
@@ -12,7 +13,7 @@ export class PostQouteComponent implements OnInit {
   user: User;
   quoteForm: FormGroup;
   userList: Set<User> = new Set();
-  qouteList:User[]; 
+  qouteList: User[]; 
   constructor(private form: FormBuilder,
               private messageService: MessageService) {
 
@@ -37,7 +38,6 @@ createPostQuoteForm() {
       this.user = qoute.value;
       this.user.likes = 0; this.user.dislikes = 0;
       this.qouteList.push(this.user);
-      console.log(this.qouteList);
       
     // this.userList.add(this.user);
     this.messageService.add({severity: 'error', summary: 'Success', detail: 'Your Qoute Posted'});
@@ -45,11 +45,11 @@ createPostQuoteForm() {
     this.quoteForm.reset();
    }
 }
-deleteQuote( user) {
-  // if (!user) {
-    // this.userList.delete(user);
+deleteQuote( user: User) {
+  let obje = this.qouteList.find(data => user.userName === data.userName);
+  this.qouteList.splice(this.qouteList.indexOf(obje), 1);
     this.messageService.add({severity: 'success', summary: 'Success', detail: 'Your Qoute Deleted'});
-
+    this. getUserList();
   // }
 }
 addLike(user) {user.likes++; }
