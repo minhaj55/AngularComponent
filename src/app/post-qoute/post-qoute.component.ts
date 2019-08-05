@@ -40,6 +40,7 @@ createPostQuoteForm() {
       this.qouteList.push(this.user);
 
     // this.userList.add(this.user);
+    this.messageService.clear();
     this.messageService.add({severity: 'error', summary: 'Success', detail: 'Your Qoute Posted'});
     this. getUserList();
     this.quoteForm.reset();
@@ -48,6 +49,7 @@ createPostQuoteForm() {
 deleteQuote( user: User) {
   const obje = this.qouteList.find(data => user.userName === data.userName);
   this.qouteList.splice(this.qouteList.indexOf(obje), 1);
+  this.messageService.clear();
     this.messageService.add({severity: 'success', summary: 'Success', detail: 'Your Qoute Deleted'});
     this. getUserList();
   // }
