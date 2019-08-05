@@ -18,8 +18,8 @@
   <div *ngFor="let user of qouteList">
  <div  class="showQuote" >
      <button id="delbtn" (click)="deleteQuote(user)">Delete</button>
-   <p appMyfont>{{user.qoute}}</p> 
-    <p>Posted By</p>{{user.username}}
+   <p appMyfont>"{{user.qoute}}"</p> 
+    <small>Posted By</small><br>{{user.username}}
   <button id="likepost" (click)="addLike(user)">Like</button><span><div id="likeBadge">{{user.likes}}</div></span>
   <button id="dislikepost" (click)="addDislike(user)">Dislike</button><span><div id="dislikeBadge">{{user.dislikes}}</div></span>
   </div>

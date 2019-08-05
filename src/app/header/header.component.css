@@ -23,3 +23,15 @@ strong{
     left: 35px;
     top: -10px;
 }
+nav{
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    margin-top: 9px;    
+}
+  a:hover{
+    color: whitesmoke;
+  }  
+  a{
+      margin-right: 16px;
+  }
