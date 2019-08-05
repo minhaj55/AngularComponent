@@ -13,7 +13,7 @@ export class PostQouteComponent implements OnInit {
   user: User;
   quoteForm: FormGroup;
   userList: Set<User> = new Set();
-  qouteList: User[]; 
+  qouteList: User[];
   constructor(private form: FormBuilder,
               private messageService: MessageService) {
 
@@ -38,7 +38,7 @@ createPostQuoteForm() {
       this.user = qoute.value;
       this.user.likes = 0; this.user.dislikes = 0;
       this.qouteList.push(this.user);
-      
+
     // this.userList.add(this.user);
     this.messageService.add({severity: 'error', summary: 'Success', detail: 'Your Qoute Posted'});
     this. getUserList();
@@ -46,7 +46,7 @@ createPostQuoteForm() {
    }
 }
 deleteQuote( user: User) {
-  let obje = this.qouteList.find(data => user.userName === data.userName);
+  const obje = this.qouteList.find(data => user.userName === data.userName);
   this.qouteList.splice(this.qouteList.indexOf(obje), 1);
     this.messageService.add({severity: 'success', summary: 'Success', detail: 'Your Qoute Deleted'});
     this. getUserList();
